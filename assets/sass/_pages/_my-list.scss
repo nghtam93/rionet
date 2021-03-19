@@ -12,9 +12,9 @@
                     &:last-child {
                         margin-left: 10px;
                     }
-                    &:hover {
+                    &:hover, &.button-active {
                         background: #0A4CE0;
-                        color: $color-white;
+                        color: $color-white!important;
                     }
                 }
             }
@@ -32,6 +32,7 @@
                     background: $color-white;
                     color: #0A4CE0;
                     border: 1px solid #0A4CE0;
+                    border-radius: 6px;
                     cursor: pointer;
                 }
                 .select-delete-active {
