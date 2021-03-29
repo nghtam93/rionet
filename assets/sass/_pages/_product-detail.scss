@@ -7,15 +7,17 @@
             display: flex;
             flex-direction: row;
             padding: 5% 0;
-            .img {
-                margin-right: 20px;
-                width: 32%;
+            .item__thumb{
+                @include flex-col(250px);
+                margin-right: 60px;
+                .dnfix__thumb{
+                    padding-top: 100%;
+                }
                 img {
                     border-radius: 10px;
                 }
             }
             .descrip {
-                margin-left: 20px;
                 position: relative;
                 .brand {
                     font-size: 14px;
@@ -50,6 +52,8 @@
                         color: #0A4CE0;
                         padding: 3px 10px;
                         background: white;
+                        white-space: nowrap;
+                        height: 32px;
                     }
                 }
                 .price {
@@ -135,7 +139,6 @@
                         align-items: center;
                         margin-bottom: 10px;
                         font-size: 16px;
-                        text-decoration: underline;
                     }
                     .pdf {
                         font-family: 'Montserrat', sans-serif;
@@ -144,10 +147,10 @@
                         font-size: 10px;
                         background: red;
                         padding: 0 5px;
-                        text-decoration: underline red !important;
                         margin-left: 10px;
                         line-height: 13px;
                         height: fit-content;
+                        text-decoration: none;
                     }
                 }
                 div:last-child {
@@ -158,27 +161,17 @@
                 }
             }
         }
-        @media (max-width:992px) {
-            .content {
-                .img {
-                    width: 50%;
-                }
-            }
-        }
         @media (max-width:767px) {
             .content {
                 // flex-direction: column;
                 display: block;
                 padding: 30px 0;
-                .img {
+                .item__thumb{
                     float: left;
-                    width: 50%;
-                    margin-right: 0;
-                    margin-bottom: 0;
-                    text-align: center;
-                    padding-right: 10px;
+                    width: 180px;
+                    margin-right: 10px;
                     img {
-                        width: 100%;
+                        border-radius: 20px;
                     }
                 }
                 .descrip {
@@ -200,6 +193,18 @@
                         float: left;
                         padding-top: 0;
                     }
+                    .see_more__wrap{
+                        text-align: center;
+                    }
+                    .see_more {
+                        display: inline-block;
+                        position: relative;
+                        font-size: 14px;
+                        min-width: 210px;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                    }
+                    
                 }
                 .details_price__left{
                     float: left;
@@ -223,24 +228,23 @@
             }
             .content {
                 .descrip {
-                    .see_more__wrap{
-                        text-align: center;
-                    }
-                    .see_more {
-                        display: inline-block;
-                        position: relative;
-                        font-size: 14px;
-                        min-width: 210px;
-                        margin-top: 10px;
-                        margin-bottom: 10px;
-                    }
                     .name {
                         padding-top: 10px;
                         font-size: 24px;
                     }
                     .quantity {
-                        padding-top: 15px;
+                        padding-top: 15px!important;
                     }
+                }
+            }
+        }
+
+        @media (max-width:380px) {
+            .content {
+                .item__thumb{
+                    float: left;
+                    width: 125px;
+                    margin-right: 10px;
                 }
             }
         }
