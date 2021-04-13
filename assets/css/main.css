@@ -3723,7 +3723,12 @@ main, .breadcrumb-page {
         .section-product-search .nav-tabs__choose.has_under_open:after {
           background-image: url(../images/icon-toggle-open.svg); }
       .section-product-search .nav-tabs {
-        display: none; }
+        display: none;
+        top: -90px;
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 20px 20px 10px;
+        background: #fff; }
         .section-product-search .nav-tabs .nav-item {
           width: 100%;
           -webkit-box-flex: 0;
@@ -4175,7 +4180,7 @@ main, .breadcrumb-page {
         display: inline-block;
         width: 12px;
         height: 12px;
-        margin-right: 6px;
+        margin-right: 5px;
         background-image: url(../images/tag.png);
         background-size: contain;
         background-position: center; }
@@ -4204,7 +4209,7 @@ main, .breadcrumb-page {
     .search__keyword__title {
       font-size: 12px; }
     .search__keyword ul li {
-      padding: 0 10px; } }
+      padding: 0 9px; } }
 @media (max-width: 390px) {
   .search__form .search-field {
     font-size: 14px;
